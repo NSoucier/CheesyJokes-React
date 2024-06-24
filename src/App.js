@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <JokeList />
     </div>
-  );
+  )
 }
 
 export default App;
