@@ -30,7 +30,7 @@ function JokeList(props) {
         let jokes = [];
         let seenJokes = new Set();
 
-        while (jokes.length < this.props.numJokesToGet) {
+        while (jokes.length < props.numJokesToGet) {
           let res = await axios.get("https://icanhazdadjoke.com", {
             headers: { Accept: "application/json" },
           });
@@ -53,7 +53,7 @@ function JokeList(props) {
     }
 
     getJokes();
-  }, []); // shouldn't this only run once since I don't have any second arguments???
+  }, [loading]);
 
   // componentDidMount() {
   //   this.getJokes();
